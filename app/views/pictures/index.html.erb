@@ -1,7 +1,15 @@
-<h1>Pictures</h1>
-<%= link_to "New Picture", "/pictures/new" %>
+<div class="well">
+	<div class="row">
+		<h1 class="col-xs-6">Photogur</h1>
+		<h2 class="col-xs-6"><%= link_to "Add New", "/pictures/new", class: "pull-right" %></h2>	
+	</div>
+</div>
 
 <% @pictures.each do |picture| %>
-  <p><%= picture.title %>, <%= picture.artist %></p>
-  <%= link_to image_tag(picture.url), "/pictures/#{picture.id}" %>
+	<div class="col-md-3 col-xs-6">
+		<a class="thumbnail" href="/pictures/<%= picture.id %>">
+	  	<%= image_tag(picture.url) %>
+	  	<p><%= picture.title %>, <%= picture.artist %></p>
+		</a>
+	</div>
 <% end %>
