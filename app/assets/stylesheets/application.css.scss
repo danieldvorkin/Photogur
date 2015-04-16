@@ -16,10 +16,10 @@
 
  img {
  	float: left;
- 	display: block;
- 	padding: 10px;
+ 	display: inline-block;
+ 	padding: 8px;
  	width: 100%;
- 	height: auto;
+ 	height: 100%;
  }
 
  body { 
@@ -28,4 +28,14 @@
   -o-background-size: cover;
   background-size: cover;
   background: image-url("galaxyPic.jpg") no-repeat center center fixed; 
+}
+
+#form {
+	text-align: center;
+}
+
+#submitBtn {
+	text-align: center;
+	width: 100px;
+	display: inline-block;
 }

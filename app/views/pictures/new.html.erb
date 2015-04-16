@@ -1,16 +1,22 @@
-<h1 style="color: white;">Add a picture</h1>
-<%= form_for @picture do |f| %>
-  <p>
-    <%= f.text_field :artist, placeholder: "Name"%>
-  </p>
-  <p>
-    <%= f.text_field :title, placeholder: "Title"%>
-  </p>
-  <p>
-    <%= f.text_field :url, placeholder: "Image URL"%>
-  </p>
-  <p>
-    <%= f.submit "Save" %>
-  </p>
-  <%= link_to "Back to Pictures", pictures_url %> 
-<% end %>
+<div class="well">
+  <div class="container" id="form">
+    <h1 style="color: black;">Add a picture</h1>
+    <%= form_for @picture do |f| %>
+    <p>
+      <%= f.text_field :artist, placeholder: "Name"%>
+    </p>
+    <p>
+      <%= f.text_field :title, placeholder: "Title"%>
+    </p>
+    <p>
+      <%= f.text_field :url, placeholder: "Image URL"%>
+    </p>
+    <p>
+      <%= f.submit "Save", class: "btn-primary" %>
+    </p>
+    <div class="btn-default" id="submitBtn">
+      <%= link_to "Back to Pictures", pictures_url %> 
+    </div>
+    <% end %>
+  </div>
+</div>

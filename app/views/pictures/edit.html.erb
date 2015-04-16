@@ -1,23 +1,21 @@
-<h1>Edit Picture</h1>
+<h1 style="color: white;">Edit Picture</h1>
 
-<p>
+<p class="btn-default" style="text-align: center; font-size: 20px;">
   <%= link_to "Back", @picture %>
 </p>
 
+<div class="well" style="text-align: center;">
 <%= form_for @picture do |f| %>
   <p>
-    <%= f.label :artist %><br>
     <%= f.text_field :artist %>
   </p>
   <p>
-    <%= f.label :title %><br>
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :url %><br>
     <%= f.text_field :url %>
   </p>
   <p>
     <%= f.submit %>
   </p>
-<% end %>
+<% end %></div>

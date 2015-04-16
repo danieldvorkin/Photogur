@@ -6,10 +6,10 @@
 </div>
 
 <% @pictures.each do |picture| %>
-	<div class="col-md-3 col-xs-6">
+	<div class="col-lg-4 col-md-3 col-xs-6">
 		<a class="thumbnail" href="/pictures/<%= picture.id %>">
 	  	<%= image_tag(picture.url) %>
-	  	<p><%= picture.title %>, <%= picture.artist %></p>
+	  	<p><%= picture.title %> :: <%= picture.artist %></p>
 		</a>
 	</div>
 <% end %>

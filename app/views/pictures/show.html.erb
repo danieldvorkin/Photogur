@@ -1,6 +1,8 @@
-<%= link_to "Back to Pictures", pictures_url %> | 
-<%= link_to "Edit", edit_picture_path(@pictures) %> | 
-<%= link_to "Delete", @picture, method: :delete, data: {confirm: "Are you sure you want to delete this picture?"} %>
+<div class="btn-default" style="font-size: 20px; text-align: center;">
+	<%= link_to "Back to Pictures", pictures_url %> | 
+	<%= link_to "Edit", edit_picture_path(@pictures) %> | 
+	<%= link_to "Delete", @picture, method: :delete, data: {confirm: "Are you sure you want to delete this picture?"} %>
+</div>
 
-<h2><%= @pictures.title %>, <%= @pictures.artist %></h2>
+<h2 style="color: white;"><%= @pictures.title %>, <%= @pictures.artist %></h2>
 <%= image_tag @pictures.url %>
